@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct SecondDetailView: View {
+    
     var body: some View {
         ZStack(alignment: .top) {
             
         VStack(alignment: .leading) {
             Group {
                 Text("Choose delivery location")
-                    .font(.custom("Poppins-Light", size: 25))
+                    .font(.largeTitle)
                     .foregroundColor(.black)
                    // .padding(.top)
                 //.multilineTextAlignment( )
@@ -38,7 +39,7 @@ struct SecondDetailView: View {
             Group
             {
                 Text("Saved Addresses")
-                    .font(.custom("Poppins-Light", size: 25))
+                    .font(.largeTitle)
                     .foregroundColor(.black)
                 
                 
@@ -63,11 +64,12 @@ struct SecondDetailView: View {
                     .font(.body)
                 Spacer()
             }
-//            .padding(.leading, 10)
         }
     }
-    }
 }
+}
+        
+       
 
 struct SecondDetailView_Previews: PreviewProvider {
     static var previews: some View {

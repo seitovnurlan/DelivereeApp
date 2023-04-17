@@ -59,7 +59,7 @@ struct ContentView: View {
                                         HStack {
                                             Text("56 stores open")
                                                 .font(.custom("Poppins-Regular", size: 16))
-                                                .padding(.leading,10)
+                                                .padding(.leading,15)
                                             Spacer()
                                         }
                                     }
@@ -93,6 +93,7 @@ struct ContentView: View {
                     HStack {
                         TabbarView(image: Image(systemName: "house")) {
                             print("JDU")
+                            
                         }
                         TabbarView(image: Image(systemName: "wallet.pass")) {
                             print("JDU")
@@ -101,10 +102,12 @@ struct ContentView: View {
                             print("JDU")
                         }
                         TabbarView(image: Image(systemName: "person")) {
+                            
                             print("JDU")
                         }
                     }
-                    .padding()
+                    .padding(.top, 8)
+//                    .frame(width: 320, height: 60)
                     .background(.black)
                     .clipShape(Capsule())
                     .padding()
@@ -237,31 +240,31 @@ struct HorizontalSlider: View {
         HStack {
             CustomImage(image: image)
                 .frame(width: 30, height: 50)
-                .foregroundColor(isSelected ? Color.white : Color.black)
+                .foregroundColor(isSelected ? .white : .black)
 //                .background(isSelected ? Color.white : Color.black)
-                .cornerRadius(12)
+                .cornerRadius(8)
            
             if isSelected {
                 CustomText(title: title,
                            color: .white,
                            fontStyle: "Poppins-Light",
-                           fontSize: 10)
+                           fontSize: 12)
             } else {
                 CustomText(title: "",
                            color: .white,
                            fontStyle: "Poppins-Light",
-                           fontSize: 10)
+                           fontSize: 12)
                 
-//                CustomImage(image: image)
-//                .frame(width: 50, height: 50)
-//                .background(.white)
-//                .cornerRadius(12)
             }
         }
-        .frame(width: 90, height: 50)
-        .background(isSelected ? .black : .clear)
+        .frame(width: isSelected ? 90 :  50)
+        .frame(height: isSelected ? 55 :  45)
+        .background(isSelected ? .black : .white)
         .cornerRadius(20)
+        .shadow(color: Color(.black).opacity(0.2), radius: 6, x: 1, y: 5)
+        .padding(.horizontal, 5)
     }
+   
 }
 
 struct SearchView: View {
@@ -332,6 +335,8 @@ struct ProductView: View {
             HStack {
                 Image("star.fill")
                         .foregroundColor(.black)
+//                        .frame(width: 3, height: 3)
+//                        .scaledToFill()
                     Text("4.5").font(.system(size: 12))
                         .foregroundColor(Color.black)
                         .fontWeight(.bold)
@@ -361,6 +366,7 @@ struct TabbarView: View {
                 .padding()
         }
         .foregroundColor(.white)
+        .cornerRadius(10)
     }
 }
 
