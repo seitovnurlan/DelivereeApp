@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2830F2AE29F1F093001C843D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2AD29F1F093001C843D /* SwiftUIView.swift */; };
 		28362BC129E963EB00F3F34A /* DelivereeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28362BC029E963EB00F3F34A /* DelivereeAppApp.swift */; };
 		28362BC329E963EB00F3F34A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28362BC229E963EB00F3F34A /* ContentView.swift */; };
 		28362BC529E963EC00F3F34A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28362BC429E963EC00F3F34A /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2830F2AD29F1F093001C843D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		28362BBD29E963EB00F3F34A /* DelivereeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelivereeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28362BC029E963EB00F3F34A /* DelivereeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelivereeAppApp.swift; sourceTree = "<group>"; };
 		28362BC229E963EB00F3F34A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				28362BC029E963EB00F3F34A /* DelivereeAppApp.swift */,
 				28362BC229E963EB00F3F34A /* ContentView.swift */,
 				28362BFB29EC92C900F3F34A /* SecondDetailView.swift */,
+				2830F2AD29F1F093001C843D /* SwiftUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				28362BC329E963EB00F3F34A /* ContentView.swift in Sources */,
 				28362BC129E963EB00F3F34A /* DelivereeAppApp.swift in Sources */,
+				2830F2AE29F1F093001C843D /* SwiftUIView.swift in Sources */,
 				28362BFC29EC92C900F3F34A /* SecondDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

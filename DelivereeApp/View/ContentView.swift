@@ -28,68 +28,69 @@ struct ContentView: View {
     @State var textFromSearch: String = ""
     
     var body: some View {
-        
+        NavigationView {
             ZStack {
-                    Color("Gray")
-                        .ignoresSafeArea(.all)
+                Color("Gray")
+                //                Color(.yellow)
+                    .ignoresSafeArea(.all)
+                
+                //                NavigationView {
+                VStack {
                     
-                NavigationView {
-                    VStack {
-                        
-                        NavigationBar()
-                        ScrollView(.vertical, showsIndicators: true) {
-                                VStack(spacing: 20) {
-                                    
-                                    ScrollView(.horizontal, showsIndicators: false) {
-                                        HStack {
-                                        // ForEach(data.title.count)
-                                            ForEach(0..<categories.count) { item in
-                                                HorizontalSlider(
-                                                    title: titleArray[item],
-                                                    image: categories[item],
-                                                    isSelected: item == select)
-                                                .onTapGesture {
-                                                    select = item
-                                                }
-                                            }
-                                        }
-                                        .padding(.horizontal)
-                                    }
-                                    VStack() {
-                                        HStack {
-                                            Text("56 stores open")
-                                                .font(.custom("Poppins-Regular", size: 16))
-                                                .padding(.leading,15)
-                                            Spacer()
-                                        }
-                                    }
-                                   
+                    NavigationBar()
+                    ScrollView(.vertical, showsIndicators: true) {
+                        VStack(spacing: 20) {
                             
-                                    SearchView(text: $textFromSearch)
-                                    
-                                    ScrollView(.horizontal, showsIndicators: false) {
-                                        HStack {
-                                            ForEach(0..<3) { item in
-                        //                        NavigationLink {
-                        //                            SecondPage()
-                        //                        } label: {
-                                                    ProductView(image: Image("food\(item)"), title: foodTitle[item], descr: foodDescr[item])
-                        //                        }
-                                                }
-                                            .padding(.trailing,10)
-                                            }
-                                        .padding(.horizontal)
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    // ForEach(data.title.count)
+                                    ForEach(0..<categories.count) { item in
+                                        HorizontalSlider(
+                                            title: titleArray[item],
+                                            image: categories[item],
+                                            isSelected: item == select)
+                                        .onTapGesture {
+                                            select = item
                                         }
-                                    
-                                    HStack {
-                                        ProductViewSecond(image: Image("food2"), title: foodTitle[2], descr: foodDescr[2])
                                     }
-                                    
                                 }
+                                .padding(.horizontal)
+                            }
+                            VStack() {
+                                HStack {
+                                    Text("56 stores open")
+                                        .font(.custom("Poppins-Regular", size: 16))
+                                        .padding(.leading,15)
+                                    Spacer()
+                                }
+                            }
+                            
+                            
+                            SearchView(text: $textFromSearch)
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach(0..<3) { item in
+                                        //                        NavigationLink {
+                                        //                            SecondPage()
+                                        //                        } label: {
+                                        ProductView(image: Image("food\(item)"), title: foodTitle[item], descr: foodDescr[item])
+                                        //                        }
+                                    }
+                                    .padding(.trailing,10)
+                                }
+                                .padding(.horizontal)
+                            }
+                            
+                            HStack {
+                                ProductViewSecond(image: Image("food2"), title: foodTitle[2], descr: foodDescr[2])
+                            }
+                            
                         }
                     }
                 }
-                    
+            }
+        }
                     HStack {
                         TabbarView(image: Image(systemName: "house")) {
                             print("JDU")
@@ -107,12 +108,12 @@ struct ContentView: View {
                         }
                     }
                     .padding(.top, 8)
-//                    .frame(width: 320, height: 60)
+                    .frame(width: 320, height: 60)
                     .background(.black)
                     .clipShape(Capsule())
                     .padding()
-                    .frame(maxHeight: .infinity, alignment: .bottom)
-            }
+//                    .frame(maxHeight: .infinity, alignment: .bottom)
+        
         
     }
 }
